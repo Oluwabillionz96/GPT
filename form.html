@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+      body{
+       display: grid;
+       place-items: center;
+       }
+
+        @media (min-width: 1024px) {
+            form{
+                width: 60%;
+            }
+        }
+    </style>
+</head>
+<body>
+   <form action="mailto:goodluckreuben@gmail.com" method="post" enctype="text/plain">
+    <p>Required fields are indicated with a <span aria-label="required">*</span></p>
+       <fieldset>
+        <legend>Personal Information</legend>
+        <br><br>
+        <label for="Fname">First Name:<span aria-label="required">*</span></label>
+        <input type="text" name="first" id="Fname" required autocomplete="on">
+        <br><br><br>
+        <label for="Sname">Last Name:<span aria-label="required">*</span></label>
+        <input type="text" name="last" id="Sname" required autocapitalize="on">
+        <br><br><br>
+        <label for="email">Your E-mail:<span aria-label="required">*</span></label>
+        <input type="email" name="email" id="email" required autocomplete="on" placeholder="Youremail@example.com">
+        <br><br><br>
+        <label for="Pnum">Phone Number<span aria-label="required">*</span></label>
+        <input type="tel" name="phone" id="Pnum" required placeholder="+234">
+       </fieldset>
+       <br><br>
+       <fieldset>
+        <legend>Account Information</legend>
+        <br><br>
+        <label for="password">Input pasword:<span aria-label="required">*</span></label>
+        <input type="password" name="password" id="password" required placeholder="Abc123/" minlength="7" maxlength="7">
+        <br><br><br>
+        <label for="confirm">Confirm Password:<span aria-label="required">*</span></label>
+        <input type="password" name="confirm" id="confirm" required placeholder="Abc123/" minlength="7" maxlength="7">
+       </fieldset>
+       <br><br>
+       <fieldset>
+        <legend>Additional Information</legend>
+        <br><br>
+        <label for="DOB">Date of birth:<span aria-label="required">*</span></label>
+        <input type="date" name="date" id="DOB" required>
+        <br><br>
+        <fieldset>
+            <legend>Gender <span aria-label="required">*</span></legend>
+            <br>
+            <input type="radio" name="gender" id="male" value="male" required checked>
+            <label for="male">Male</label>
+            <input type="radio" name="gender" id="female" value="female" required>
+            <label for="female">Female</label>
+            <input type="radio" name="gender" id="others" value="others" required>
+            <label for="others">Others</label>
+        </fieldset>
+        <br>
+        <input type="checkbox" name="subscribtion" id="subscribe" value="subscribe to our newsletter" checked>
+        <label for="subscribe">Subscribe to our news letter</label>
+       </fieldset>
+       <br><br>
+       <input type="submit">
+   </form> 
+</body>
+</html>
